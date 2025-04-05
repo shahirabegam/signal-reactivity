@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
     height: 100%;
+}
+
+.field-border {
+    border: 1px solid #495057;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.font-label-color {
+    color: #4c4c68;
+}
+
+.count-footer {
+    background: #4c4c68;
+    color: white;
+}
+
+.table-container {
+    height: 300px;
 }

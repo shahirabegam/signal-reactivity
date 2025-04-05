@@ -1,7 +1,7 @@
 :host {
-  display: flex;
-  flex-direction: column;
-  height: inherit;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
 }
 
 .body-color {
@@ -11,23 +11,30 @@
 .counter-container {
     background-color: #282828;
     padding: 12px 20px;
-    border-radius: 35px;
+    border-radius: 8px;
 
-    & > .increment, .decrement {
-        padding: 3px 12px;
+    &>.increment,
+    .decrement {
+        padding: 12px 10px;
         cursor: pointer;
+
         &:hover {
-            background: #3b3b3b;
-            border-radius: 45%;
             transition: all 200ms ease-in-out;
+            box-shadow: 1px 0px 7px #3b3b3b;
+        }
+
+        &:hover + .counter-circle {
+            border: 1px solid white;
         }
     }
-    & > .counter-circle {
+
+    &>.counter-circle {
         background: #3b3b3b;
         padding: 10px 16px;
     }
 }
 
 .color-white {
-    color: white;;
+    color: white;
+    ;
 }

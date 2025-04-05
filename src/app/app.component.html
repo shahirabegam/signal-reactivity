@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="d-flex flex-column align-items-center flex-grow-1 body-color">
   <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
     <div class="counter-container p-8 d-flex align-items-center">
@@ -8,10 +8,13 @@
 
       <span class="decrement color-white d-flex" (click)="imperativeCounterService.increment()">+</span>
     </div>
-    <div class="counter-status color-white mt-4">
-      <span>Double: {{ imperativeCounterService.doubleCount.value }} </span>
-      <span>Double: {{ imperativeCounterService.isEven ? 'Even' : 'Odd' }} </span>
+    <div class="counter-status color-white mt-4 d-flex flex-column">
+      <span class="me-2">Double: {{ imperativeCounterService.doubleCount.value }} </span>
+      <span>is Even: {{ imperativeCounterService.isEven ? 'Even' : 'Odd' }} </span>
     </div>
   </div>
  
-</div>
+</div> -->
+
+
+<router-outlet></router-outlet> 

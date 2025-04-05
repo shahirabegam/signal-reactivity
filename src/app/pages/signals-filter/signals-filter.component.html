@@ -1,0 +1,30 @@
+<h2 class="d-flex align-items-center justify-content-center mb-4 font-label-color font-weight-bold">Signals Version</h2>
+
+<div class="controls d-flex justify-content-between">
+    <input class="field-border flex-grow-1" type="text" placeholder="Search user" [value]="search()"
+        (input)="onSearch($event)" />
+    <select class="field-border ms-4" [value]="status()" (change)="onStatus($event)">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+    </select>
+</div>
+
+@if(loading()) {
+<div class="d-flex align-items-center justify-content-center font-label-color flex-grow-1">
+    Loading...
+</div>
+} @else {
+<div class="mt-4 field-border table-container d-flex justify-content-between flex-column flex-grow-1">
+    <ul class="list-unstyled p-4">
+        @for (user of users(); track user.name) {
+        <li class="mb-2">
+            {{ user.name }} <span class="text-muted">({{ user.status }})</span>
+        </li>
+        }
+    </ul>
+    <div class="d-flex align-items justify-content-end px-4 py-2 count-footer"> Total {{totalCount()}}</div>
+
+</div>
+
+}
